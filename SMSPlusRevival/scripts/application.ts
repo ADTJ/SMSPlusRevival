@@ -18,6 +18,9 @@ function onDeviceReady(): void {
     var receivedElement = parentElement.querySelector('.received');
     listeningElement.setAttribute('style', 'display:none;');
     receivedElement.setAttribute('style', 'display:block;');
+
+    let scriptElem = Object.assign(document.createElement("script"), { type: "text/javascript", src: "./index.js" });
+    document.head.appendChild(scriptElem);
 }
 
 function onPause(): void {
